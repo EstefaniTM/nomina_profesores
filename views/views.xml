@@ -1,0 +1,78 @@
+<odoo>
+    <data>
+    <!-- Definición explícita de la vista de lista -->
+    <record model="ir.ui.view" id="nomina_profesores.list">
+        <field name="name">profesores list</field>
+        <field name="model">nomina_profesores.profesor</field>
+        <field name="arch" type="xml">
+            <list>
+              <field name="nombre"/>
+              <field name="cedula"/>
+              <field name="cargo"/>
+              <field name="currency_id"/>
+              <field name="sueldo" widget="monetary" />
+              <field name="extras" widget="monetary"/>
+              <field name="bonos" widget="monetary"/>
+              <field name="sueldo_final" widget="monetary"/>
+            </list>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="nomina_profesores.form">
+      <field name="name">nomina_profesores form</field>
+      <field name="model">nomina_profesores.profesor</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+              <group col="1">
+                  <field name="nombre"/>
+                  <field name="cedula"/>
+                  <field name="cargo"/>
+                  <field name="currency_id1" invisible="1"/>
+                  <field name="sueldo" widget="monetary" options="{'currency_field': 'currency_id1'}"/>
+                  <field name="extras" widget="monetary" options="{'currency_field': 'currency_id1'}"/> 
+                  <field name="bonos" widget="monetary" options="{'currency_field': 'currency_id1'}"/> 
+                  <field name="sueldo_final" readonly="1" widget="monetary" options="{'currency_field': 'currency_id1'}"/> 
+              </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+<record model="ir.ui.view" id="nomina_personas_search">
+  <field name="name">nomina_profesores search</field>
+  <field name="model">nomina_profesores.profesor</field>
+  <field name="arch" type="xml">
+    <search>
+      <field name="nombre"/>
+      <field name="cedula"/> 
+      <field name="cargo"/>
+      <group string="Agrupar">
+        <filter name="groupby_cargo" context="{'group_by':'cargo'}"/>
+      </group>
+    </search>
+  </field>
+</record>
+
+<!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="nomina_profesores.action_window">
+        <field name="name">profesores window</field>
+        <field name="res_model">nomina_profesores.profesor</field>
+        <field name="view_mode">list,form,search</field>
+    </record>
+
+    <!-- Top menu item -->
+
+    <menuitem name="Nomina" id="nomina_profesores.menu_root" sequence="1"/>
+
+    <menuitem name="Gestionar" id="nomina_profesores.gestionar"
+    parent="nomina_profesores.menu_root" action="nomina_profesores.action_window"/>
+
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="nomina_profesores.menu_1" parent="nomina_profesores.menu_root"/>
+    <menuitem name="Menu 2" id="nomina_profesores.menu_2" parent="nomina_profesores.menu_root"/>
+-->
+
+    </data>
+</odoo>

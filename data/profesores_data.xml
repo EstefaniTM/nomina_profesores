@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Datos de nominas de profesores -->
+        <record id="Data_1" model="nomina_profesores.profesor">
+            <field name="nombre">María López</field>
+            <field name="cedula">1701234567</field>
+            <field name="cargo">Profesor de Matemáticas</field>
+            <field name="sueldo">900.00</field>
+            <field name="extras">100.00</field>
+            <field name="bonos">50.00</field>
+        </record>
+        <record id="Data_2" model="nomina_profesores.profesor">
+            <field name="nombre">Juan Pérez</field>
+            <field name="cedula">1712345678</field>
+            <field name="cargo">Profesor de Física</field>
+            <field name="sueldo">950.00</field>
+            <field name="extras">150.00</field>
+            <field name="bonos">75.00</field>
+        </record>
+        <record id="Data_3" model="nomina_profesores.profesor">
+            <field name="nombre">Ana González</field>
+            <field name="cedula">1723456789</field>
+            <field name="cargo">Profesor de Química</field>
+            <field name="sueldo">920.00</field>
+            <field name="extras">120.00</field>
+            <field name="bonos">60.00</field>
+        </record>
+        <record id="Data_4" model="nomina_profesores.profesor">
+            <field name="nombre">Pedro Sánchez</field>
+            <field name="cedula">1734567890</field>
+            <field name="cargo">Profesor de Historia</field>
+            <field name="sueldo">880.00</field>
+            <field name="extras">80.00</field>
+            <field name="bonos">40.00</field>
+        </record>
+        <record id="Data_5" model="nomina_profesores.profesor">
+            <field name="nombre">Carmen Jiménez</field>
+            <field name="cedula">1745678901</field>
+            <field name="cargo">Profesora de Literatura</field>
+            <field name="sueldo">870.00</field>
+            <field name="extras">90.00</field>
+            <field name="bonos">45.00</field>
+        </record>
+        <record id="Data_6" model="nomina_profesores.profesor">
+            <field name="nombre">Luis Martínez</field>
+            <field name="cedula">1756789012</field>
+            <field name="cargo">Profesor de Biología</field>
+            <field name="sueldo">940.00</field>
+            <field name="extras">130.00</field>
+            <field name="bonos">70.00</field>
+        </record>
+        <record id="Data_7" model="nomina_profesores.profesor">
+            <field name="nombre">Elena Castillo</field>
+            <field name="cedula">1767890123</field>
+            <field name="cargo">Profesora de Inglés</field>
+            <field name="sueldo">910.00</field>
+            <field name="extras">110.00</field>
+            <field name="bonos">55.00</field>
+        </record>
+        <record id="Data_8" model="nomina_profesores.profesor">
+            <field name="nombre">Javier Rivera</field>
+            <field name="cedula">1778901234</field>
+            <field name="cargo">Profesor de Educación Física</field>
+            <field name="sueldo">860.00</field>
+            <field name="extras">70.00</field>
+            <field name="bonos">30.00</field>
+        </record>
+    </data>
+</odoo>
