@@ -14,6 +14,7 @@
               <field name="extras" widget="monetary"/>
               <field name="bonos" widget="monetary"/>
               <field name="sueldo_final" widget="monetary"/>
+              <field name="estado"/>
             </list>
         </field>
     </record>
@@ -33,6 +34,7 @@
                   <field name="extras" widget="monetary" options="{'currency_field': 'currency_id1'}"/> 
                   <field name="bonos" widget="monetary" options="{'currency_field': 'currency_id1'}"/> 
                   <field name="sueldo_final" readonly="1" widget="monetary" options="{'currency_field': 'currency_id1'}"/> 
+                  <field name="estado"/>
               </group>
             </sheet>
         </form>
@@ -47,6 +49,7 @@
       <field name="nombre"/>
       <field name="cedula"/> 
       <field name="cargo"/>
+      <field name="estado"/>
       <group string="Agrupar">
         <filter name="groupby_cargo" context="{'group_by':'cargo'}"/>
       </group>
