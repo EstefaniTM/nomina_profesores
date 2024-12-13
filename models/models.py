@@ -16,7 +16,7 @@ class Profesor(models.Model):
     company_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env.company)
     currency_id = fields.Many2one('res.currency', string="Currency", related='company_id.currency_id')
     currency_id1 = fields.Many2one('res.currency', string="Currency", default=lambda self: self.env.ref('base.USD'))
-    estado = fields.Selection([('activo', 'Activo'),('no actiiivo', 'No Activo')], string="Estado", default='activo')
+    estado = fields.Selection([('activo', 'Activo'),('no activo', 'No Activo')], string="Estado", default='activo')
 
 
     @api.depends('sueldo', 'extras', 'bonos')
